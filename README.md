@@ -159,22 +159,109 @@ python3 -m compileall -q .
 
 ## 10. 실행 증거 및 스크린샷
 
-`screenshots/` 폴더에 구현 및 실행 과정을 확인할 수 있는 스크린샷을 저장했습니다.
+본 프로젝트는 구현 과정과 실제 실행 결과를 확인할 수 있도록 단계별 스크린샷을 저장했습니다.
 
-- 02_project_structure.png
-- 03_matrix_test.png
-- 04_mac_test.png
-- 05_judge_test.png
-- 06_performance_test.png
-- 07_input_mode_test.png
-- 08_json_data_validation.png
-- 09_json_analysis_test.png
-- 10_main_json_mode.png
-- 11_main_input_mode.png
-- 12_judge_normalization_test.png
-- 13_json_filter_normalization.png
-- 17_final_json_execution.png
-- 18_final_input_execution.png
+각 이미지에는 해당 단계의 구현 내용과 테스트 결과를 함께 설명했습니다.
+
+### 10-1. 프로젝트 및 기본 기능 구현
+
+**02. 프로젝트 디렉터리 구성**
+
+프로젝트 폴더, Python 소스 디렉터리 및 스크린샷 저장 폴더를 생성하고 전체 구조를 확인했습니다.
+
+![프로젝트 구조](screenshots/02_project_structure.png)
+
+**03. 행렬 생성 및 접근 기능 테스트**
+
+`make_matrix`, `get_value`, `set_value` 함수를 테스트하여 행렬 생성과 원소 읽기 및 변경 기능을 확인했습니다.
+
+![행렬 테스트](screenshots/03_matrix_test.png)
+
+**04. MAC 연산 기능 테스트**
+
+동일한 위치의 행렬 원소를 곱하고 합산하는 MAC 연산이 정상적으로 수행되는지 확인했습니다.
+
+![MAC 테스트](screenshots/04_mac_test.png)
+
+**05. 패턴 판정 기능 테스트**
+
+Cross와 X 패턴의 점수를 비교하여 판정하는 기능을 테스트했습니다.
+
+![판정 테스트](screenshots/05_judge_test.png)
+
+**06. 성능 측정 기능 테스트**
+
+3×3, 5×5, 13×13, 25×25 행렬의 MAC 연산 횟수와 평균 실행 시간을 측정했습니다.
+
+![성능 측정](screenshots/06_performance_test.png)
+
+### 10-2. 사용자 입력 및 JSON 분석 기능
+
+**07. 사용자 입력 모드 테스트**
+
+Filter A, Filter B 및 입력 패턴을 직접 입력하고 각 필터의 MAC 점수와 판정 결과를 확인했습니다.
+
+![사용자 입력 모드](screenshots/07_input_mode_test.png)
+
+**08. JSON 데이터 검증 테스트**
+
+JSON 데이터의 구조와 배열 크기 등 데이터 유효성 검증 기능을 확인했습니다.
+
+![JSON 데이터 검증](screenshots/08_json_data_validation.png)
+
+**09. JSON 분석 기능 테스트**
+
+JSON 파일에 저장된 필터와 패턴 데이터를 불러와 MAC 연산 및 판정 결과를 확인했습니다.
+
+![JSON 분석 테스트](screenshots/09_json_analysis_test.png)
+
+**10. 메인 프로그램 JSON 모드 테스트**
+
+메인 메뉴에서 JSON 분석 모드를 선택하고 프로그램의 전체 실행 흐름을 확인했습니다.
+
+![메인 JSON 모드](screenshots/10_main_json_mode.png)
+
+**11. 메인 프로그램 사용자 입력 모드 테스트**
+
+메인 메뉴에서 사용자 입력 모드를 선택하고 입력부터 최종 판정까지의 실행 과정을 확인했습니다.
+
+![메인 사용자 입력 모드](screenshots/11_main_input_mode.png)
+
+### 10-3. 라벨 정규화 및 최종 실행 검증
+
+**12. 판정 라벨 표준화 테스트**
+
+`+`, `cross`, `plus`를 Cross로, `x`, `ex`를 X로 표준화하는 기능을 확인했습니다.
+
+![판정 라벨 정규화](screenshots/12_judge_normalization_test.png)
+
+**13. JSON 필터 라벨 정규화 테스트**
+
+JSON 필터에 사용된 다양한 라벨 표현을 표준 라벨로 변환하여 필터를 정상적으로 찾는지 확인했습니다.
+
+![JSON 필터 정규화](screenshots/13_json_filter_normalization.png)
+
+**17. 최종 JSON 분석 실행 결과**
+
+JSON 분석 모드에서 테스트 케이스의 점수, 판정, PASS/FAIL 및 최종 결과 요약을 확인했습니다.
+
+![최종 JSON 실행](screenshots/17_final_json_execution.png)
+
+**18. 최종 사용자 입력 실행 결과**
+
+사용자 입력 모드에서 Filter A와 Filter B의 점수를 계산하고 최종 Cross 판정 결과를 확인했습니다.
+
+![최종 사용자 입력 실행](screenshots/18_final_input_execution.png)
+
+**19. GitHub 저장소 제출 확인**
+
+프로젝트 파일과 README가 GitHub 저장소에 업로드된 것을 확인했습니다.
+
+![GitHub 저장소](screenshots/19_github_repository.png)
+
+### 10-4. 검증 결과
+
+총 15개의 스크린샷을 통해 프로젝트 구성, 기본 함수 구현, MAC 연산, 패턴 판정, 사용자 입력, JSON 데이터 검증, 성능 측정 및 GitHub 업로드 과정을 확인할 수 있습니다.
 
 ## 11. 프로젝트 결과
 
